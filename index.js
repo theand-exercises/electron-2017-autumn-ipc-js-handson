@@ -5,11 +5,10 @@ app.on('ready', ()=>{
     const win = new BrowserWindow();
     win.loadURL(`file://${__dirname}/index.html`);
 
-    ipcMain.on("hello", () =>{
-        console.log("XXXX");
-    }
-        
-    )
+    ipcMain.on("hello", (e,m) =>{
+            console.log(m);
+        }        
+    );
 });
 
 
